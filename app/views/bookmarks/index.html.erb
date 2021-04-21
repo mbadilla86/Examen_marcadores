@@ -2,6 +2,8 @@
 
 <h1>Bookmarks</h1>
 
+<%= render 'form', bookmark: @bookmark %>
+
 <table>
   <thead>
     <tr>
@@ -15,6 +17,7 @@
 
   <tbody>
     <% @bookmarks.each do |bookmark| %>
+    <%= render 'bookmark', bookmark: bookmark %>
       <tr>
         <td><%= bookmark.title %></td>
         <td><%= bookmark.url %></td>
@@ -31,3 +34,5 @@
 <br>
 
 <%= link_to 'New Bookmark', new_bookmark_path %>
+
+<div class="bookmark-title"></div>

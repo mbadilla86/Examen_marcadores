@@ -1,0 +1,5 @@
+var elem = document.querySelector(`#bookmark-<%= @bookmark.id %>`)
+elem.innerHTML = "<%= j render partial: 'bookmarks/bookmark-detail', locals: { bookmark: @bookmark } %>"
+
+var div = document.querySelector('#bookmark-title')
+div.innerHTML = ''
